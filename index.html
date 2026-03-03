@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>OS Installations - Complete Windows OS Installation Guides</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    <header>
+        <div class="header-title">
+            <h1>Operating Systems<br>Installations</h1>
+        </div>
+        <div class="header-bottom">
+            <h2>John Manuel O. Tianzon</h2>
+            <p>BSIT-S-2A</p>
+        </div>
+    </header>
+
+    <main>
+    </main>
+
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+
+                const hamburger = document.querySelector('.hamburger');
+                const navMenu = document.querySelector('.nav-menu');
+
+                if (hamburger) {
+                    hamburger.addEventListener('click', () => {
+                        hamburger.classList.toggle('active');
+                        navMenu.classList.toggle('active');
+                    });
+                }
+            });
+    </script>
+
+</body>
+</html>
