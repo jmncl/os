@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>OS Installations - Complete Windows OS Installation Guides</title>
+    <title>Windows 7 Installation </title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="page-header">
         <nav>
             <div class="nav-container">
                 <div class="logo">
@@ -34,7 +34,7 @@
                                 <li><a href="windows-server-2003.html">Windows Server 2003</a></li>
                                 <li><a href="windows-vista.html">Windows Vista</a></li>
                                 <li><a href="windows-server-2008.html">Windows Server 2008</a></li>
-                                <li><a href="windows-7.html">Windows 7</a></li>
+                                <li><a href="windows-7.html" class="active">Windows 7</a></li>
                                 <li><a href="windows-8.html">Windows 8</a></li>
                                 <li><a href="windows-server-2012.html">Windows Server 2012</a></li>
                                 <li><a href="windows-10.html">Windows 10</a></li>
@@ -57,26 +57,84 @@
                 </div>
             </div>
         </nav>
-        <div class="header-title">
-            <h1>Operating Systems<br>Installations</h1>
-        </div>
-        <div class="header-bottom">
-            <h2>John Manuel O. Tianzon</h2>
-            <p>BSIT-S-2A</p>
+        <div class="page-header-title">
+            <h1>Windows 7 Installation</h1>
         </div>
     </header>
 
     <main>
+        <div class="os-page">
+            <div class="video-container">
+                <h2>Watch the Installation Process</h2>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/S1WPyiMCnGw?rel=0&showinfo=0&modestbranding=1" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="installation-steps">
+                <h2>Installation Steps</h2>
+                <ol>
+                    <li>Boot your computer from the Windows 7 DVD</li>
+                    <li>Press any key to boot from DVD when prompted</li>
+                    <li>Wait for setup to load files and start</li>
+                    <li>Select your language, time, and keyboard preferences</li>
+                    <li>Click "Next" and then "Install Now"</li>
+                    <li>Accept the license agreement by checking the box</li>
+                    <li>Choose "Custom (advanced)" installation type</li>
+                    <li>Select the partition where you want to install Windows 7</li>
+                    <li>Click "Next" to begin installation (format if needed)</li>
+                    <li>Wait for Windows to copy files and install features</li>
+                    <li>System will restart during installation process</li>
+                    <li>Configure your username and computer name</li>
+                    <li>Set your password and password hint</li>
+                    <li>Enter your product key when prompted</li>
+                    <li>Choose your Windows Update settings</li>
+                    <li>Set your time zone and date/time</li>
+                    <li>Select your network location (Home, Work, or Public)</li>
+                    <li>Your Windows 7 installation is now complete</li>
+                </ol>
+            </div>
+        </div>
     </main>
 
+    <footer>
+        <div class="footer-content">
+            <p>&copy; OS Installations by John Manuel O. Tianzon, BSIT-S-2A 2026</p>
+        </div>
+    </footer>
+
     <script>
-        // Mobile menu toggle
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
         
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const scrollPosition = window.scrollY;
+            const fadeThreshold = 50;
+            const fadeComplete = 200;
+            
+            if (scrollPosition > fadeThreshold) {
+                const fadeProgress = Math.min((scrollPosition - fadeThreshold) / (fadeComplete - fadeThreshold), 1);
+                header.classList.add('fading');
+                
+                const main = document.querySelector('main');
+                const currentPadding = 300 - (220 * fadeProgress);
+                main.style.paddingTop = currentPadding + 'px';
+            } else {
+                header.classList.remove('fading');
+                const main = document.querySelector('main');
+                main.style.paddingTop = '300px';
+            }
         });
     </script>
 </body>
