@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>Group Policy Management </title>
+    <title>About Me - OS Installations</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header class="page-header">
+    <header>
         <nav>
             <div class="nav-container">
                 <div class="logo">
@@ -18,14 +16,12 @@
                         <h1>ITOS220-T: Operating Systems</h1>
                     </a>
                 </div>
-
                 <div class="nav-wrapper">
                     <div class="hamburger">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-
                     <ul class="nav-menu">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle">Installations</a>
@@ -58,62 +54,22 @@
                                 <li><a href="group-policy.html">Group Policy Management</a></li>
                             </ul>
                         </li>
-                        <li><a href="case-study.html">Case Study</a></li>
+                        <li><a href="case-study.html" class="active">Case Study</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-
-        <div class="page-header-title">
-            <h1>Group Policy Management</h1>
-        </div>
     </header>
 
-    <main>
-        <div class="os-page">
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/RT1l8ZxjGVE" frameborder="0" allowfullscreen></iframe>
-            </div>
+    <main class="case-study-page">
+        <div class="case-study-header">
+            <h1>Case Study</h1>
+            <p>Learn about the case study project</p>
+        </div>
 
-            <h2 class="toggle-heading">
-                Group Policy Management
-            </h2>
-            
-            <div class="description-content">
-                <p>Group Policy is a feature of Windows Server that provides centralized management and configuration of operating systems, applications, and user settings in an Active Directory environment. Administrators can create Group Policy Objects (GPOs) that define specific configurations and apply them to users and computers based on their organizational unit membership. Group Policy can manage security settings, deploy software, configure Windows features, map network drives, and enforce compliance with organizational standards. This powerful tool reduces administrative overhead by automating configuration tasks and ensuring consistent settings across the network.</p>
-            </div>
+        <div class="case-study-content">
+            <p style="text-align: justify;">This is the case study page. Here you can find information about the case study project.</p>
         </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; OS Installations by John Manuel O. Tianzon, BSIT-S-2A 2026</p>
-        </div>
-    </footer>
-
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            const scrollPosition = window.scrollY;
-            const fadeComplete = 200;
-            const fadeProgress = Math.min(scrollPosition / fadeComplete, 1);
-
-            if (scrollPosition > 0) {
-                header.classList.add('fading');
-                header.style.setProperty('--fade-progress', fadeProgress);
-            } else {
-                header.classList.remove('fading');
-                header.style.setProperty('--fade-progress', 0);
-            }
-        });
-    </script>
-</body>
-</html>
-
+   
