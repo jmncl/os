@@ -248,7 +248,7 @@ header.page-header.fading .hamburger {
     position: absolute;
     top: 100%;
     left: 0;
-    background: white;
+    background: #221fbcda;
     min-width: 200px;
     max-height: 300px;
     overflow-y: auto;
@@ -259,6 +259,26 @@ header.page-header.fading .hamburger {
     transform: translateY(-10px);
     transition: all 0.3s ease;
     margin-top: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #1a185a;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+    background: #1a185a;
+    border-radius: 4px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 4px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: #f0f0f0;
 }
 
 .dropdown:nth-child(1) .dropdown-menu,
@@ -283,14 +303,15 @@ header.page-header.fading .hamburger {
 .dropdown-menu a {
     color: #ffffff;
     padding: 12px 20px;
-    background-color: #0078d4;
+    background-color: transparent;
     display: block;
     border-radius: 0;
+    transition: all 0.3s ease;
 }
 
 .dropdown-menu a:hover {
-    background-color: #0078d4;
-    color: #ffffff;
+    background-color: rgba(255,255,255,0.1);
+    color: #6bc6ff;
 }
 
 .nav-wrapper {
@@ -473,7 +494,6 @@ header.page-header.fading .hamburger {
     line-height: 1.8;
 }
 
-/* About Page */
 .about-page {
     max-width: 800px;
     margin: 0 auto;
