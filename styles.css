@@ -282,7 +282,8 @@ header.page-header.fading .hamburger {
 }
 
 .dropdown:nth-child(1) .dropdown-menu,
-.dropdown:nth-child(2) .dropdown-menu {
+.dropdown:nth-child(2) .dropdown-menu,
+.dropdown:nth-child(3) .dropdown-menu {
     right: 100%;
     left: auto;
     top: 0;
